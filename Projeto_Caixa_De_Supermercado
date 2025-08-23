@@ -1,0 +1,135 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Dicionário de produtos disponíveis
+produtos = {
+    "banana": 2.50,
+    "maçã": 3.00,
+    "pão": 1.50,
+    "leite": 4.20,
+    "café": 8.90,
+    "arroz": 5.00,
+    "feijão": 6.80,
+    "abobora": 5.50,
+    "melancia": 8.00,
+    "filé de peixe": 9.00,
+    "bisteca": 15.00
+}
+
+# Variáveis
+carrinho = []
+total = 0.0
+
+# Função para adicionar produto ao carrinho
+def adicionar_produto():                      # define a função que será chamada ao clicar em “Adicionar”
+    global total                             # indica que vamos usar e alterar a variável total definida fora da função
+    nome = entrada_produto.get().lower()     # lê o texto do campo de entrada, converte para minúsculas e armazena em nome
+    if nome in produtos:                     # verifica se o produto digitado existe no dicionário de produtos
+        preco = produtos[nome]               # obtém o preço do produto a partir do dicionário
+        carrinho.append((nome, preco))       # adiciona uma tupla (nome, preço) à lista carrinho
+        total += preco                       # incrementa o total da compra com o preço do produto
+        atualizar_lista()                    # chama a função que atualiza a exibição dos itens e total
+        entrada_produto.delete(0, tk.END)    # limpa o campo de entrada para o próximo produto
+    else:                                     # caso o produto não seja encontrado no dicionário
+        messagebox.showerror("Erro", "Produto não encontrado.")  # exibe uma caixa de erro ao usuário
+
+# Atualiza a lista de produtos adicionados e o total
+def atualizar_lista():                        # define a função que atualiza a Listbox e o campo de total
+    lista_itens.delete(0, tk.END)            # limpa todos os itens atuais exibidos na Listbox
+    for item, preco in carrinho:             # percorre cada tupla (item, preço) no carrinho
+        lista_itens.insert(                  # insere no final da Listbox
+            tk.END,
+            f"{item.capitalize()} - R$ {preco:.2f}"  # formata o texto com nome capitalizado e preço
+        )
+    caixa_total.config(state="normal")       # desbloqueia o campo de total para permitir edição
+    caixa_total.delete(0, tk.END)            # limpa o conteúdo atual do campo de total
+    caixa_total.insert(0, f"R$ {total:.2f}") # insere o total formatado (2 casas decimais)
+    caixa_total.config(state="readonly")     # bloqueia novamente o campo para prevenir edição manual
+
+# Interface
+janela = tk.Tk()                             # cria a janela principal do aplicativo
+janela.title("Caixa do Supermercado")        # define o título da janela
+janela.geometry("420x550")                   # define o tamanho da janela (largura x altura)
+janela.configure(bg="#5100FF")               # define a cor de fundo da janela
+
+# Título
+titulo = tk.Label(                           # cria um widget Label para o título
+    janela,
+    text="🛒 Mercadinho Bom Jesus",
+    font=("Arial", 18, "bold"),
+    bg="#80ff00"
+)
+titulo.pack(pady=10)                         # posiciona o título com espaçamento vertical
+
+# Produtos disponíveis
+frame_produtos = tk.LabelFrame(              # cria um quadro com borda e título para a lista de produtos
+    janela,
+    text="Produtos disponíveis",
+    bg="#f0f0f0",
+    font=("Arial", 10, "bold")
+)
+frame_produtos.pack(padx=10, pady=5, fill="x")  # posiciona o quadro e expande na horizontal
+
+for nome, preco in produtos.items():         # itera sobre o dicionário de produtos
+    lbl = tk.Label(                          # cria uma Label para cada produto
+        frame_produtos,
+        text=f"{nome.capitalize():10} - R$ {preco:.2f}",
+        bg="#f0f0f0",
+        anchor="w"
+    )
+    lbl.pack(anchor="w", padx=10)            # posiciona cada Label dentro do frame
+
+# Entrada do produto
+entrada_produto = tk.Entry(                  # cria um campo de texto para digitar o nome do produto
+    janela,
+    font=("Arial", 12)
+)
+entrada_produto.pack(pady=10)                # posiciona o campo com margem vertical
+
+btn_adicionar = tk.Button(                   # cria um botão para adicionar o produto
+    janela,
+    text="Adicionar ao carrinho",
+    command=adicionar_produto,               # vincula o clique do botão à função adicionar_produto
+    font=("Arial", 12),
+    bg="#4CAF50",
+    fg="white"
+)
+btn_adicionar.pack()                         # posiciona o botão abaixo do campo de entrada
+
+# Lista de itens comprados
+lista_itens = tk.Listbox(                    # cria uma Listbox para exibir os itens do carrinho
+    janela,
+    width=40,
+    height=5,
+    font=("Arial", 11)
+)
+lista_itens.pack(pady=10)                    # posiciona a Listbox com margem vertical
+
+# Caixa de total
+frame_total = tk.Frame(                       # cria um frame para agrupar o rótulo e o campo de total
+    janela,
+    bg="#f0f0f0"
+)
+frame_total.pack(pady=10)                    # posiciona o frame com margem vertical
+
+label_total = tk.Label(                      # cria um label estático com o texto "Total:"
+    frame_total,
+    text="Total:",
+    font=("Arial", 14, "bold"),
+    bg="#f0f0f0"
+)
+label_total.pack(side="left", padx=5)        # posiciona o label à esquerda dentro do frame
+
+caixa_total = tk.Entry(                      # cria um campo de texto para exibir o valor total
+    frame_total,
+    font=("Arial", 14),
+    width=10,
+    justify="center"
+)
+caixa_total.insert(0, "R$ 0.00")             # insere o valor inicial do total
+caixa_total.pack(side="left")                # posiciona o campo à direita do rótulo
+caixa_total.config(state="readonly")         # define o campo como somente leitura
+
+# Iniciar a aplicação
+janela.mainloop()                            # entra no loop principal do Tk, aguardando eventos
+P
