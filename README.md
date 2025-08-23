@@ -16,6 +16,17 @@ Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí
     </a>
 </p>
 
+<p align="left">
+    <a href="https://instagram.com/fala_leoo" target="_blank">
+        <img 
+            alt="Instagram" 
+            title="Me siga no Instagram" 
+            src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+        />
+    </a>
+</p>
+
+
 ---
 
 ### 🤖 Linguagens e Tecnologias
