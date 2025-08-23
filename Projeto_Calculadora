@@ -1,0 +1,56 @@
+import tkinter as tk
+
+# Função para inserir números ou operadores
+def clicar(tecla):
+    entrada.insert(tk.END, tecla)
+
+# Função para limpar a entrada
+def limpar():
+    entrada.delete(0, tk.END)
+
+# Função para calcular o resultado
+def calcular():
+    try:
+        expressao = entrada.get()
+        resultado = eval(expressao)
+        entrada.delete(0, tk.END)
+        entrada.insert(tk.END, str(resultado))
+    except:
+        entrada.delete(0, tk.END)
+        entrada.insert(tk.END, "Erro")
+
+# Janela principal
+janela = tk.Tk()
+janela.title("Calculadora")
+janela.geometry("300x400")
+janela.configure(bg="#f0f0f0")
+
+# Campo de entrada v
+entrada = tk.Entry(janela, font=("Arial", 24), borderwidth=2, relief="groove", justify="right")
+entrada.pack(padx=10, pady=20, fill="x")
+
+# Botões da calculadora
+botoes = [
+    ('7', '8', '9', '/'),
+    ('4', '5', '6', '*'),
+    ('1', '2', '3', '-'),
+    ('0', '.', '=', '+'),
+]
+
+for linha in botoes:
+    frame = tk.Frame(janela, bg="#f0f0f0")
+    frame.pack(expand=True, fill="both")
+    for botao in linha:
+        if botao == '=':
+            btn = tk.Button(frame, text=botao, font=("Arial", 18), bg="#4CAF50", fg="white",
+                            command=calcular)
+        else:
+            btn = tk.Button(frame, text=botao, font=("Arial", 18), command=lambda b=botao: clicar(b))
+        btn.pack(side="left", expand=True, fill="both", padx=2, pady=2)
+
+# Botão de limpar
+btn_limpar = tk.Button(janela, text="C", font=("Arial", 18), bg="#f44336", fg="white", command=limpar)
+btn_limpar.pack(fill="x", padx=10, pady=10)
+
+# Inicia a aplicação
+janela.mainloop()
