@@ -6,15 +6,12 @@
 Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí o ensino médio no CETEPI I, com o curso técnico em informática. Atualmente, estou cursando Engenharia de Produção na UFAL. Sou apaixonado por tecnologia e ciência de dados, compartilho meu conhecimento mistrando aulas de programação e realizando pesquisas tecnólogicas dentro e fora da universidade.
 
 <p align="left">
-    </a>
-    <a href="https://github.com/Larissakich?tab=followers">
+    <a href="https://github.com/Larissakich?tab=followers" target="_blank">
         <img 
             alt="Seguidores" 
             title="Me siga no GitHub" 
             src="https://custom-icon-badges.demolab.com/github/followers/LeonBarros?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
         />
-    </a>
-</p>
     </a>
     <a href="https://instagram.com/fala_leoo" target="_blank">
         <img 
@@ -24,8 +21,6 @@ Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí
         />
     </a>
 </p>
-
-
 ---
 
 ### 🤖 Linguagens e Tecnologias
