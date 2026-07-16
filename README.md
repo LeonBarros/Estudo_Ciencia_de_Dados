@@ -8,14 +8,15 @@ Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí
 <p align="left">
     <a href="https://github.com/LeonBarros" target="_blank">
         <img 
-            alt="Seguidores" 
-            title="Me siga no GitHub" 
+            alt="GitHub"
+            title="Meu GitHub"
+            src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
         />
     </a>
     <a href="https://instagram.com/fala_leoo" target="_blank">
         <img 
-            alt="Instagram" 
-            title="Me siga no Instagram" 
+            alt="Instagram"
+            title="Me siga no Instagram"
             src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
         />
     </a>
