@@ -1,7 +1,7 @@
 
 # 👩🏻‍💻 Leonardo Barros
 
-**`Desenvolvedora FullStack`**
+**`Desenvolvedor FullStack`**
 
 Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí o ensino médio no CETEPI I, com o curso técnico em informática. Atualmente, estou cursando Engenharia de Produção na UFAL. Sou apaixonado por tecnologia e ciência de dados, compartilho meu conhecimento mistrando aulas de programação e realizando pesquisas tecnólogicas dentro e fora da universidade.
 
