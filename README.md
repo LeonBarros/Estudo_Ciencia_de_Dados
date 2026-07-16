@@ -10,7 +10,6 @@ Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí
         <img 
             alt="Seguidores" 
             title="Me siga no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/followers/LeonBarros?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
         />
     </a>
     <a href="https://instagram.com/fala_leoo" target="_blank">
