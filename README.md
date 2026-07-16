@@ -3,7 +3,11 @@
 
 **`Desenvolvedor FullStack`**
 
-Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Concluí o ensino médio no CETEPI I, com o curso técnico em informática. Atualmente, estou cursando Engenharia de Produção na UFAL. Sou apaixonado por tecnologia e ciência de dados, compartilho meu conhecimento mistrando aulas de programação e realizando pesquisas tecnólogicas dentro e fora da universidade.
+Me chamo Leonardo Barros Gomes, tenho 21 anos e sou natural de Alagoas. Sou técnico em Informática pelo CETEPI I e atualmente curso Engenharia de Produção na Universidade Federal de Alagoas (UFAL).
+
+Tenho grande interesse por desenvolvimento de software, ciência de dados e inovação tecnológica, áreas nas quais busco aprimorar continuamente meus conhecimentos por meio de projetos, pesquisas e aprendizado constante. Além disso, atuo ministrando aulas de programação, compartilhando conhecimento e contribuindo para a formação de novos desenvolvedores.
+
+Estou sempre em busca de novos desafios que me permitam aplicar tecnologia para desenvolver soluções eficientes, aprender novas ferramentas e evoluir profissionalmente como desenvolvedor Full Stack e entusiasta da Ciência de Dados.
 
 <p align="left">
     <a href="https://instagram.com/fala_leoo" target="_blank">
